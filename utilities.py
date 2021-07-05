@@ -8,3 +8,6 @@ class Utilities:
         delta = 1e-7
         return -np.sum(t * np.log(y + delta))
 
+    def numerical_diff(self, f, x):
+        h = 1e-4    # 0.0001
+        return (f(x+h) - f(x-h)) / (2*h)
